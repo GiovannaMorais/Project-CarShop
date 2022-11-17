@@ -44,6 +44,16 @@ class CarController {
     const { id } = this.req.params;
     if (!isValidObjectId(id)) return this.res.status(422).json({ message: 'Invalid mongo id' });
     const car = await this.service.getCarById(id as string);
+    if (!car) return this.res.status(404).json({ message: 'Car not found' });
+    return this.res.status(200).json(car);
+  }
+  public async updateCarById() {
+    const { id } = this.req.params;
+    const carUpdated = this.req.body;
+    console.log('carUpdated', carUpdated);
+    
+    if (!isValidObjectId(id)) return this.res.status(422).json({ message: 'Invalid mongo id' });
+    const car = await this.service.updateCarById(id, carUpdated);
     console.log('carController', car);
     if (!car) return this.res.status(404).json({ message: 'Car not found' });
     return this.res.status(200).json(car);
