@@ -23,6 +23,10 @@ class CarODM extends AbstractODM<ICar> {
   public async getCarById(_id: string): Promise<ICar | null> {
     return this.model.findOne({ _id });
   }
+
+  public async updateCarById(_id: string, car: ICar): Promise<ICar | null > {
+    return this.model.findByIdAndUpdate({ _id }, car, { new: true });
+  }
 }
 
 export default CarODM;
