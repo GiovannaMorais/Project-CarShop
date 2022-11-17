@@ -23,6 +23,10 @@ class MotorcyclesODM extends AbstractODM<IMotorcycle> {
   public async getMotorcycleById(_id: string): Promise<IMotorcycle | null> {
     return this.model.findOne({ _id });
   }
+
+  public async updateMotorcycleById(_id: string, car: IMotorcycle): Promise<IMotorcycle | null > {
+    return this.model.findByIdAndUpdate({ _id }, car, { new: true });
+  }
 }
 
 export default MotorcyclesODM;
