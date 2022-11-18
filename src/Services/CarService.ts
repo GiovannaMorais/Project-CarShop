@@ -12,7 +12,6 @@ class CarService {
   public async create(car: ICar) {
     const carODM = new CarODM();
     const cars = await carODM.create(car);
-    console.log('cars', cars);
     return this.createCarDomains(cars);
   }
 
@@ -25,14 +24,11 @@ class CarService {
   public async getCarById(id: string) {
     const carODM = new CarODM();
     const cars = await carODM.getCarById(id);
-    console.log('cars', cars);
     return this.createCarDomains(cars);
   }
   public async updateCarById(id: string, car: ICar) {
     const carODM = new CarODM();
     const cars = await carODM.updateCarById(id, { ...car });
-    console.log('...car ', { ...car });
-    console.log('carsService', cars);
     return this.createCarDomains(cars);
   }
 }

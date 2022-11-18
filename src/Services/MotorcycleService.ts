@@ -12,7 +12,6 @@ class MotorcycleService {
   public async create(motorcycle: IMotorcycle) {
     const motorcycleODM = new MotorcyclesODM();
     const motorcycles = await motorcycleODM.create(motorcycle);
-    console.log('motorcycles', motorcycles);
     return this.createMotorcycleDomains(motorcycles);
   }
 
@@ -25,14 +24,11 @@ class MotorcycleService {
   public async getMotorcycleById(id: string) {
     const motorcycleODM = new MotorcyclesODM();
     const motorcycles = await motorcycleODM.getMotorcycleById(id);
-    console.log('motorcycles', motorcycles);
     return this.createMotorcycleDomains(motorcycles);
   }
   public async updateMotorcycleById(id: string, motorcycle: IMotorcycle) {
     const motorcycleODM = new MotorcyclesODM();
     const motorcycles = await motorcycleODM.updateMotorcycleById(id, { ...motorcycle });
-    console.log('...car ', { ...motorcycle });
-    console.log('motorcyclesService', motorcycles);
     return this.createMotorcycleDomains(motorcycles);
   }
 }

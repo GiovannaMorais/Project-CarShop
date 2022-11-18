@@ -51,7 +51,6 @@ class MotorcycleController {
     const motorcycleUpdated = this.req.body;    
     if (!isValidObjectId(id)) return this.res.status(422).json({ message: 'Invalid mongo id' });
     const motorcycle = await this.service.updateMotorcycleById(id, motorcycleUpdated);
-    console.log('motorcycleController', motorcycle);
     if (!motorcycle) return this.res.status(404).json({ message: 'Motorcycle not found' });
     return this.res.status(200).json(motorcycle);
   }
