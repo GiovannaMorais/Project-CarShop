@@ -21,7 +21,7 @@ Para começar com este projeto, clone o repositório e instale suas dependência
 
 O projeto pode ser executado de duas formas: com Docker ou sem Docker.
 
-### 🔸 Com Docker
+## 🔸 Com Docker
 - Certifique-se de ter o docker-compose instalado na versão 1.29 ou superior. Em seguida, rode os serviços node e db com o comando:
 
 ```bash
@@ -43,7 +43,7 @@ docker exec -it car_shop bash
 - Instale as dependências (caso existam) com npm install. Lembre-se de não rodar o comando npm audit fix, pois isso pode gerar conflitos com o avaliador.
 
 
-### 🔸 Sem Docker
+## 🔸 Sem Docker
 - Para executar o projeto sem Docker, é necessário ter o Node instalado em sua máquina (a versão 16).Em seguida, instale as dependências (caso existam) com npm install. Lembre-se de não rodar o comando npm audit fix, pois isso pode gerar conflitos com o avaliador.
 
 # 📍Endpoints
