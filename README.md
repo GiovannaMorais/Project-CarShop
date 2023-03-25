@@ -6,7 +6,7 @@ Este projeto é uma API com CRUD para gerenciar uma concessionária de veículos
 
 
 
-## ⚠️ Instalação
+# ⚠️ Instalação
 
 Para começar com este projeto, clone o repositório e instale suas dependências:
 
@@ -16,7 +16,7 @@ Para começar com este projeto, clone o repositório e instale suas dependência
   npm install
 ```
     
-## 🎲 Executando a Aplicação
+# 🎲 Executando a Aplicação
 
 
 O projeto pode ser executado de duas formas: com Docker ou sem Docker.
@@ -45,7 +45,8 @@ docker exec -it car_shop bash
 
 ### 🔸 Sem Docker
 - Para executar o projeto sem Docker, é necessário ter o Node instalado em sua máquina (a versão 16).Em seguida, instale as dependências (caso existam) com npm install. Lembre-se de não rodar o comando npm audit fix, pois isso pode gerar conflitos com o avaliador.
-## 📍Endpoints
+
+# 📍Endpoints
 
 Os seguintes endpoints estão disponíveis na API:
 
@@ -85,7 +86,7 @@ Atualiza uma moto pelo ID informado
 
 Exclui uma moto pelo ID informado
 
-## 🛠 Tecnologias
+# 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -94,7 +95,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Express](https://expressjs.com/pt-br/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Mongoose](https://www.npmjs.com/package/mongoose)
-## 😊 Conclusão
+
+# 😊 Conclusão
 
 Este projeto forneceu um ponto de partida para a construção de uma API para gerenciar uma concessionária de veículos. Você pode continuar a construir sobre este projeto e personalizá-lo para atender às suas necessidades específicas.
 
